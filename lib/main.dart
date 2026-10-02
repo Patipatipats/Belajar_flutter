@@ -7,7 +7,8 @@
 // import 'package:belajar_flutter/expended_dan_stack/ExpendedWidget.dart';
 // import 'package:belajar_flutter/expended_dan_stack/LayoutDua.dart';
 // import 'package:belajar_flutter/expended_dan_stack/LayoutSatu.dart';
-import 'package:belajar_flutter/expended_dan_stack/layout4.dart';
+// import 'package:belajar_flutter/expended_dan_stack/layout4.dart';
+import 'package:belajar_flutter/latihan/gridinstagram.dart';
 // import 'package:belajar_flutter/latihan/latihan3.dart';
 // import 'package:belajar_flutter/expended_dan_stack/LayoutSatu.dart';
 
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        body: Profilewidget(),
+        body: Gridinstagram(),
       ),
     );
   }
