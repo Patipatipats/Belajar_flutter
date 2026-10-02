@@ -44,6 +44,7 @@ class LatihanContainer extends StatelessWidget {
                 )
               ),
               Text("Nama :Ipat"),
+              SizedBox(height: 5),
               Text("NISN : 123456789"),
               Text("Kelas : XII RPL 1 "),
             ],
