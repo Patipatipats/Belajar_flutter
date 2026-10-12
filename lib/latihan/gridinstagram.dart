@@ -21,47 +21,96 @@ class Gridinstagram extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // =========================
+    // DATA SOROTAN
+    // =========================
+    final List<String> sorotan = [
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufIJK2Fk15RGaI29nm_YWyMwAeVPXoBQnjM6ElZzgew&s=10',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9',
+    ];
+
     return Scaffold(
+      // =========================
+      // APP BAR
+      // =========================
       appBar: AppBar(
         title: const Text('Ipatt'),
         actions: [
-          IconButton(icon: const Icon(Icons.add_box_outlined), onPressed: () {}),
-          IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+          IconButton(
+            icon: const Icon(Icons.add_box_outlined),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () {},
+          ),
         ],
       ),
+
+      // =========================
+      // BODY
+      // =========================
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // =========================
+            // PROFILE HEADER
+            // =========================
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
+                  // Foto Profil
                   const CircleAvatar(
                     radius: 40,
                     backgroundImage: NetworkImage(
-                      'https://imgs.search.brave.com/l9r1AWUkJG1tmvwemlJRJR4X1Ki6e4Mor88mQq4QMiA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5z/LmtsaW1nLmNvbS9y/ZXNpemVkLzYzMHgv/Zy84L18vOF9wb3Ry/ZXRfbWVuYXdhbl9q/ZWZyaV9uaWNob2xf/cGFtZXJfcGVydXRf/c2l4cGFja19uZXRp/emVuX3NhbGFoX2Zv/a3VzX2RpX3VyYXRu/eWEvamVmcmlfbmlj/aG9sLTIwMjMwMTI5/LTAwNi1ub25fZm90/b2dyYWZlcl9rbHku/anBn',
+                      'https://i.pinimg.com/736x/3f/40/28/3f402828c97ecbc8033125170010a67b.jpg',
                     ),
                   ),
+
+                  const SizedBox(width: 20),
+
+                  // Statistik
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: const [
                         Column(
                           children: [
-                            Text('12', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                            Text(
+                              '3',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
                             Text('Posts'),
                           ],
                         ),
                         Column(
                           children: [
-                            Text('1.5M', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                            Text(
+                              '100M',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
                             Text('Followers'),
                           ],
                         ),
                         Column(
                           children: [
-                            Text('150', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                            Text(
+                              '150',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
                             Text('Following'),
                           ],
                         ),
@@ -71,18 +120,36 @@ class Gridinstagram extends StatelessWidget {
                 ],
               ),
             ),
+
+            // =========================
+            // BIO
+            // =========================
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Ipatt | Software Engineering', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text(
+                    'Ipatt',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
                   SizedBox(height: 4),
-                  Text('Flutter & Web Developer\nZorin OS User'),
+                  Text(
+                    'Welcome to my profile 👋',
+                    style: TextStyle(fontSize: 14),
+                  ),
                 ],
               ),
             ),
+
             const SizedBox(height: 15),
+
+            // =========================
+            // BUTTON
+            // =========================
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
@@ -90,64 +157,97 @@ class Gridinstagram extends StatelessWidget {
                   Expanded(
                     child: OutlinedButton(
                       onPressed: () {},
-                      child: const Text('Edit Profile', style: TextStyle(color: Colors.black)),
+                      child: const Text(
+                        'Edit Profile',
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   ),
+
                   const SizedBox(width: 8),
+
                   Expanded(
                     child: OutlinedButton(
                       onPressed: () {},
-                      child: const Text('Share Profile', style: TextStyle(color: Colors.black)),
+                      child: const Text(
+                        'Share Profile',
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
+
             const SizedBox(height: 15),
+
+            // =========================
+            // SOROTAN
+            // =========================
             SizedBox(
-              height: 90,
+              height: 95,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 8,
+                itemCount: sorotan.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(left: 12.0),
                     child: Column(
                       children: [
+                        // Foto Sorotan
                         CircleAvatar(
                           radius: 30,
                           backgroundColor: Colors.grey.shade300,
-                          child: const CircleAvatar(
-                            radius: 28,
-                            backgroundColor: Colors.white,
-                            child: Icon(Icons.star, color: Colors.amber),
+                          backgroundImage: NetworkImage(
+                            sorotan[index],
                           ),
                         ),
+
                         const SizedBox(height: 5),
-                        Text('Highlight ${index + 1}', style: const TextStyle(fontSize: 12)),
+
+                        // Nama Sorotan
+                        Text(
+                          'Sorotan ${index + 1}',
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   );
                 },
               ),
             ),
+
+            const SizedBox(height: 5),
+
             const Divider(),
+
+            // =========================
+            // GRID POST
+            // =========================
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate:
+                  const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 2,
               ),
-              itemCount: 15,
+              itemCount: 6,
               itemBuilder: (context, index) {
                 return Container(
-                  color: Colors.primaries[index % Colors.primaries.length],
+                  color: Colors.primaries[
+                    index % Colors.primaries.length
+                  ],
                   child: Center(
                     child: Text(
                       'Post ${index + 1}',
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 );
