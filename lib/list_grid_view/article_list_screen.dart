@@ -7,7 +7,7 @@ class ArticleListScreen extends StatelessWidget {
 
   final List<Map<String, String>> articles = const [
     {
-      'title': 'Flutter Dasar',
+      'title': 'Flutterrr',
       'description': 'Belajar dasar flutter',
       'image': 'https://picsum.photos/200/300?1',
     },
