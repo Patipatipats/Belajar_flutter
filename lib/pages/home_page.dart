@@ -38,6 +38,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Masuk Latihan 3'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoute.form);
+              },
+              child: Text('form page'),
+            ),
           ],
         ),
       ),
