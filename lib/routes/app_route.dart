@@ -16,6 +16,9 @@ import 'package:belajar_flutter/list_grid_view/article_list_screen.dart';
 
 // HALAMAN TUGAS AI
 import 'package:belajar_flutter/tugasai/daftar_wisata.dart';
+import 'package:belajar_flutter/pages/fetch_api_page.dart';
+import 'package:belajar_flutter/pages/post_page.dart';
+import 'package:belajar_flutter/pages/comment_page.dart';
 
 class AppRoute {
   // NAMA ROUTE
@@ -26,6 +29,9 @@ class AppRoute {
   static const String lat3 = '/lat3';
   static const String form = '/form';
   static const String eskul = '/eskul';
+  static const String fetchApi = '/fetch-api';
+  static const String postApi = '/post-api';
+  static const String commentApi = '/comment-api';
   static const String wisata = '/wisata';
 
   // DAFTAR ROUTE
@@ -44,7 +50,11 @@ class AppRoute {
 
     eskul: (context) => const FormEskul(),
 
-    // HALAMAN DAFTAR WISATA
+    fetchApi: (context) => const AlbumPage(),
+    
+    postApi: (context) => const PostPage(),
+    commentApi: (context) => const CommentPage(),
+        // HALAMAN DAFTAR WISATA
     wisata: (context) => const DaftarWisata(),
   };
 }

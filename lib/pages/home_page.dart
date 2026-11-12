@@ -297,7 +297,7 @@ class HomePage extends StatelessWidget {
               },
             ),
 
-                        menuCard(
+            menuCard(
               context,
               title: 'Tiket Wisata',
               subtitle: 'Jelajahi dan pesan tiket wisata',
@@ -305,6 +305,39 @@ class HomePage extends StatelessWidget {
               color: const Color(0xFF26A69A),
               onTap: () {
                 Navigator.pushNamed(context, AppRoute.wisata);
+              },
+            ),
+
+            menuCard(
+              context,
+              title: 'fetch API',
+              subtitle: 'Jelajahi dan pesan tiket wisata',
+              icon: Icons.travel_explore_rounded,
+              color: const Color(0xFF26A69A),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoute.fetchApi);
+              },
+            ),
+
+             menuCard(
+              context,
+              title: 'post API',
+              subtitle: 'Jelajahi dan pesan tiket wisata',
+              icon: Icons.travel_explore_rounded,
+              color: const Color(0xFF26A69A),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoute.postApi);
+              },
+            ),
+            
+            menuCard(
+              context,
+              title: 'comment API',
+              subtitle: 'Jelajahi dan pesan tiket wisata',
+              icon: Icons.travel_explore_rounded,
+              color: const Color(0xFF26A69A),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoute.commentApi);
               },
             ),
 
